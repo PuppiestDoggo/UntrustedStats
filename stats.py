@@ -44,7 +44,7 @@ def userStats(targetUser):
     rolesStart = str(soup.find_all("p", {"class": "role-start"})).split("</p>")
     rolesStats = str(soup.find_all("li", {"class": "role-item role-stat"})).split("</li>")
 
-    rolesDB = {"OL" :{}, "CCTV": {}, "Enforcer": {}, "IM": {}, "Anal": {}, "NS": {}}
+    rolesDB = {"OL" :{}, "CCTV": {}, "Enforcer": {}, "IM": {}, "Anal": {}, "NS": {}, "SE": {}, "BH": {}, "IH": {}, "Spear": {}, "BoHu": {}, "Journo":{}, "Skiddie": {}, "Blubber": {}, "RC": {}, "Socio": {}, "RH": {}, "CD": {}, "AL": {}, "FA": {}, "Mole FO": {}, "Mole inv": {}, "Mole off": {}, "RS": {}}
 
     rolesDB["OL"]["Start"] = rolesStart[0].split("</span>")[0].split('"part"')[1].replace(">", "")
     rolesDB["OL"]["Finished"] = rolesStart[0].split("</span>")[1].split('"part"')[1].replace(">", "")
@@ -86,7 +86,132 @@ def userStats(targetUser):
     rolesDB["NS"]["Loses"] = rolesStats[36].replace(', <li class="role-item role-stat">', "")
     rolesDB["NS"]["Ratio"] = rolesStats[37].replace(', <li class="role-item role-stat">', "")
 
-    print(rolesDB["Anal"])
+    rolesDB["SE"]["Start"] = rolesStart[6].split("</span>")[0].split('"part"')[1].replace(">", "")
+    rolesDB["SE"]["Finished"] = rolesStart[6].split("</span>")[1].split('"part"')[1].replace(">", "")
+    rolesDB["SE"]["Win"] = rolesStats[42].replace('[<<li class="role-item role-stat">', "").replace(
+        '<li class="role-item role-stat">', "")
+    rolesDB["SE"]["Loses"] = rolesStats[43].replace(', <li class="role-item role-stat">', "")
+    rolesDB["SE"]["Ratio"] = rolesStats[44].replace(', <li class="role-item role-stat">', "")
+
+    rolesDB["BH"]["Start"] = rolesStart[7].split("</span>")[0].split('"part"')[1].replace(">", "")
+    rolesDB["BH"]["Finished"] = rolesStart[7].split("</span>")[1].split('"part"')[1].replace(">", "")
+    rolesDB["BH"]["Win"] = rolesStats[49].replace('[<<li class="role-item role-stat">', "").replace(
+        '<li class="role-item role-stat">', "")
+    rolesDB["BH"]["Loses"] = rolesStats[50].replace(', <li class="role-item role-stat">', "")
+    rolesDB["BH"]["Ratio"] = rolesStats[51].replace(', <li class="role-item role-stat">', "")
+
+    rolesDB["IH"]["Start"] = rolesStart[8].split("</span>")[0].split('"part"')[1].replace(">", "")
+    rolesDB["IH"]["Finished"] = rolesStart[8].split("</span>")[1].split('"part"')[1].replace(">", "")
+    rolesDB["IH"]["Win"] = rolesStats[56].replace('[<<li class="role-item role-stat">', "").replace(
+        '<li class="role-item role-stat">', "")
+    rolesDB["IH"]["Loses"] = rolesStats[57].replace(', <li class="role-item role-stat">', "")
+    rolesDB["IH"]["Ratio"] = rolesStats[58].replace(', <li class="role-item role-stat">', "")
+
+    rolesDB["Spear"]["Start"] = rolesStart[9].split("</span>")[0].split('"part"')[1].replace(">", "")
+    rolesDB["Spear"]["Finished"] = rolesStart[9].split("</span>")[1].split('"part"')[1].replace(">", "")
+    rolesDB["Spear"]["Win"] = rolesStats[63].replace('[<<li class="role-item role-stat">', "").replace(
+        '<li class="role-item role-stat">', "")
+    rolesDB["Spear"]["Loses"] = rolesStats[64].replace(', <li class="role-item role-stat">', "")
+    rolesDB["Spear"]["Ratio"] = rolesStats[65].replace(', <li class="role-item role-stat">', "")
+
+    rolesDB["BoHu"]["Start"] = rolesStart[10].split("</span>")[0].split('"part"')[1].replace(">", "")
+    rolesDB["BoHu"]["Finished"] = rolesStart[10].split("</span>")[1].split('"part"')[1].replace(">", "")
+    rolesDB["BoHu"]["Win"] = rolesStats[70].replace('[<<li class="role-item role-stat">', "").replace(
+        '<li class="role-item role-stat">', "")
+    rolesDB["BoHu"]["Loses"] = rolesStats[71].replace(', <li class="role-item role-stat">', "")
+    rolesDB["BoHu"]["Ratio"] = rolesStats[72].replace(', <li class="role-item role-stat">', "")
+
+    rolesDB["Journo"]["Start"] = rolesStart[11].split("</span>")[0].split('"part"')[1].replace(">", "")
+    rolesDB["Journo"]["Finished"] = rolesStart[11].split("</span>")[1].split('"part"')[1].replace(">", "")
+    rolesDB["Journo"]["Win"] = rolesStats[77].replace('[<<li class="role-item role-stat">', "").replace(
+        '<li class="role-item role-stat">', "")
+    rolesDB["Journo"]["Loses"] = rolesStats[78].replace(', <li class="role-item role-stat">', "")
+    rolesDB["Journo"]["Ratio"] = rolesStats[79].replace(', <li class="role-item role-stat">', "")
+
+    rolesDB["Skiddie"]["Start"] = rolesStart[12].split("</span>")[0].split('"part"')[1].replace(">", "")
+    rolesDB["Skiddie"]["Finished"] = rolesStart[12].split("</span>")[1].split('"part"')[1].replace(">", "")
+    rolesDB["Skiddie"]["Win"] = rolesStats[84].replace('[<<li class="role-item role-stat">', "").replace(
+        '<li class="role-item role-stat">', "")
+    rolesDB["Skiddie"]["Loses"] = rolesStats[85].replace(', <li class="role-item role-stat">', "")
+    rolesDB["Skiddie"]["Ratio"] = rolesStats[86].replace(', <li class="role-item role-stat">', "")
+
+    rolesDB["Blubber"]["Start"] = rolesStart[13].split("</span>")[0].split('"part"')[1].replace(">", "")
+    rolesDB["Blubber"]["Finished"] = rolesStart[13].split("</span>")[1].split('"part"')[1].replace(">", "")
+    rolesDB["Blubber"]["Win"] = rolesStats[91].replace('[<<li class="role-item role-stat">', "").replace(
+        '<li class="role-item role-stat">', "")
+    rolesDB["Blubber"]["Loses"] = rolesStats[92].replace(', <li class="role-item role-stat">', "")
+    rolesDB["Blubber"]["Ratio"] = rolesStats[93].replace(', <li class="role-item role-stat">', "")
+
+    rolesDB["RC"]["Start"] = rolesStart[14].split("</span>")[0].split('"part"')[1].replace(">", "")
+    rolesDB["RC"]["Finished"] = rolesStart[14].split("</span>")[1].split('"part"')[1].replace(">", "")
+    rolesDB["RC"]["Win"] = rolesStats[98].replace('[<<li class="role-item role-stat">', "").replace(
+        '<li class="role-item role-stat">', "")
+    rolesDB["RC"]["Loses"] = rolesStats[99].replace(', <li class="role-item role-stat">', "")
+    rolesDB["RC"]["Ratio"] = rolesStats[100].replace(', <li class="role-item role-stat">', "")
+
+    rolesDB["Socio"]["Start"] = rolesStart[15].split("</span>")[0].split('"part"')[1].replace(">", "")
+    rolesDB["Socio"]["Finished"] = rolesStart[15].split("</span>")[1].split('"part"')[1].replace(">", "")
+    rolesDB["Socio"]["Win"] = rolesStats[105].replace('[<<li class="role-item role-stat">', "").replace(
+        '<li class="role-item role-stat">', "")
+    rolesDB["Socio"]["Loses"] = rolesStats[106].replace(', <li class="role-item role-stat">', "")
+    rolesDB["Socio"]["Ratio"] = rolesStats[107].replace(', <li class="role-item role-stat">', "")
+
+    rolesDB["RH"]["Start"] = rolesStart[16].split("</span>")[0].split('"part"')[1].replace(">", "")
+    rolesDB["RH"]["Finished"] = rolesStart[16].split("</span>")[1].split('"part"')[1].replace(">", "")
+    rolesDB["RH"]["Win"] = rolesStats[112].replace('[<<li class="role-item role-stat">', "").replace(
+        '<li class="role-item role-stat">', "")
+    rolesDB["RH"]["Loses"] = rolesStats[113].replace(', <li class="role-item role-stat">', "")
+    rolesDB["RH"]["Ratio"] = rolesStats[114].replace(', <li class="role-item role-stat">', "")
+
+    rolesDB["CD"]["Start"] = rolesStart[17].split("</span>")[0].split('"part"')[1].replace(">", "")
+    rolesDB["CD"]["Finished"] = rolesStart[17].split("</span>")[1].split('"part"')[1].replace(">", "")
+    rolesDB["CD"]["Win"] = rolesStats[119].replace('[<<li class="role-item role-stat">', "").replace(
+        '<li class="role-item role-stat">', "")
+    rolesDB["CD"]["Loses"] = rolesStats[120].replace(', <li class="role-item role-stat">', "")
+    rolesDB["CD"]["Ratio"] = rolesStats[121].replace(', <li class="role-item role-stat">', "")
+
+    rolesDB["AL"]["Start"] = rolesStart[18].split("</span>")[0].split('"part"')[1].replace(">", "")
+    rolesDB["AL"]["Finished"] = rolesStart[18].split("</span>")[1].split('"part"')[1].replace(">", "")
+    rolesDB["AL"]["Win"] = rolesStats[126].replace('[<<li class="role-item role-stat">', "").replace(
+        '<li class="role-item role-stat">', "")
+    rolesDB["AL"]["Loses"] = rolesStats[127].replace(', <li class="role-item role-stat">', "")
+    rolesDB["AL"]["Ratio"] = rolesStats[128].replace(', <li class="role-item role-stat">', "")
+
+    rolesDB["FA"]["Start"] = rolesStart[19].split("</span>")[0].split('"part"')[1].replace(">", "")
+    rolesDB["FA"]["Finished"] = rolesStart[19].split("</span>")[1].split('"part"')[1].replace(">", "")
+    rolesDB["FA"]["Win"] = rolesStats[133].replace('[<<li class="role-item role-stat">', "").replace(
+        '<li class="role-item role-stat">', "")
+    rolesDB["FA"]["Loses"] = rolesStats[134].replace(', <li class="role-item role-stat">', "")
+    rolesDB["FA"]["Ratio"] = rolesStats[135].replace(', <li class="role-item role-stat">', "")
+
+    rolesDB["Mole FO"]["Start"] = rolesStart[20].split("</span>")[0].split('"part"')[1].replace(">", "")
+    rolesDB["Mole FO"]["Finished"] = rolesStart[20].split("</span>")[1].split('"part"')[1].replace(">", "")
+    rolesDB["Mole FO"]["Win"] = rolesStats[140].replace('[<<li class="role-item role-stat">', "").replace(
+        '<li class="role-item role-stat">', "")
+    rolesDB["Mole FO"]["Loses"] = rolesStats[141].replace(', <li class="role-item role-stat">', "")
+    rolesDB["Mole FO"]["Ratio"] = rolesStats[142].replace(', <li class="role-item role-stat">', "")
+
+    rolesDB["Mole inv"]["Start"] = rolesStart[21].split("</span>")[0].split('"part"')[1].replace(">", "")
+    rolesDB["Mole inv"]["Finished"] = rolesStart[21].split("</span>")[1].split('"part"')[1].replace(">", "")
+    rolesDB["Mole inv"]["Win"] = rolesStats[147].replace('[<<li class="role-item role-stat">', "").replace(
+        '<li class="role-item role-stat">', "")
+    rolesDB["Mole inv"]["Loses"] = rolesStats[148].replace(', <li class="role-item role-stat">', "")
+    rolesDB["Mole inv"]["Ratio"] = rolesStats[149].replace(', <li class="role-item role-stat">', "")
+
+    rolesDB["Mole off"]["Start"] = rolesStart[22].split("</span>")[0].split('"part"')[1].replace(">", "")
+    rolesDB["Mole off"]["Finished"] = rolesStart[22].split("</span>")[1].split('"part"')[1].replace(">", "")
+    rolesDB["Mole off"]["Win"] = rolesStats[154].replace('[<<li class="role-item role-stat">', "").replace(
+        '<li class="role-item role-stat">', "")
+    rolesDB["Mole off"]["Loses"] = rolesStats[155].replace(', <li class="role-item role-stat">', "")
+    rolesDB["Mole off"]["Ratio"] = rolesStats[156].replace(', <li class="role-item role-stat">', "")
+
+    rolesDB["RS"]["Start"] = rolesStart[23].split("</span>")[0].split('"part"')[1].replace(">", "")
+    rolesDB["RS"]["Finished"] = rolesStart[23].split("</span>")[1].split('"part"')[1].replace(">", "")
+    rolesDB["RS"]["Win"] = rolesStats[161].replace('[<<li class="role-item role-stat">', "").replace(
+        '<li class="role-item role-stat">', "")
+    rolesDB["RS"]["Loses"] = rolesStats[162].replace(', <li class="role-item role-stat">', "")
+
+    print(rolesDB["AL"])
 
 
     return {"level": level,
@@ -108,5 +233,7 @@ def userStats(targetUser):
             "ENFWin": rolesDB["Enforcer"]["Win"],
             "ENFLoses": rolesDB["Enforcer"]["Loses"],
             "ENFRatio": rolesDB["Enforcer"]["Ratio"],
+
+
 
             }

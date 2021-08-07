@@ -94,9 +94,5 @@ async def add(ctx, targetUser):
 if __name__ == "__main__":
     pass
 
-userFileRead = open("userList", "r")
-for User in userFileRead:
-    if checkIfUserExists(User.strip()):
-        userToCheck.append(User.strip())
 
-bot.run("TOKEN")
+bot.run("ODczNTM5NTQ0NjUyMzMzMDg2.YQ55GQ.R5O1LFtuTFGK0XWM93tWZR6bgpc")
