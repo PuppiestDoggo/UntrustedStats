@@ -99,4 +99,4 @@ for User in userFileRead:
     if checkIfUserExists(User.strip()):
         userToCheck.append(User.strip())
 
-bot.run("ODczNTM5NTQ0NjUyMzMzMDg2.YQ55GQ.W7s74MfPnv3VMevM0TwX6qWTFf4")
+bot.run("TOKEN")
