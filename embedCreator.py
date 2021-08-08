@@ -89,3 +89,131 @@ def createEmbed(stats, targetUser, page):
 
         )
         return embed
+
+    elif page == 4:
+        embed = discord.Embed(
+            title=targetUser + '\'s IM games',
+            timestamp=datetime.datetime.utcnow(),
+            colour=discord.colour.Colour.orange()
+        )
+
+        embed.add_field(
+            name="Inside man",
+            value="Wins : " + stats.get("IMWin") + "\nLoses : " + stats.get("IMLoses")
+                  + " \nRatio : " + stats.get("IMRatio"),
+            inline=True
+
+        )
+        return embed
+
+    elif page == 5:
+        embed = discord.Embed(
+            title=targetUser + '\'s Analyst games',
+            timestamp=datetime.datetime.utcnow(),
+            colour=discord.colour.Colour.orange()
+        )
+
+        embed.add_field(
+            name="Analyst",
+            value="Wins : " + stats.get("AnalWin") + "\nLoses : " + stats.get("AnalLoses")
+                  + " \nRatio : " + stats.get("AnalRatio"),
+            inline=True
+
+        )
+        return embed
+
+    elif page == 6:
+        embed = discord.Embed(
+            title=targetUser + '\'s Network Specialist games',
+            timestamp=datetime.datetime.utcnow(),
+            colour=discord.colour.Colour.orange()
+        )
+
+        embed.add_field(
+            name="Network Specialist",
+            value="Wins : " + stats.get("NSWin") + "\nLoses : " + stats.get("NSLoses")
+                  + " \nRatio : " + stats.get("NSRatio"),
+            inline=True
+
+        )
+        return embed
+
+    elif page == 7:
+        embed = discord.Embed(
+            title=targetUser + '\'s SE games',
+            timestamp=datetime.datetime.utcnow(),
+            colour=discord.colour.Colour.orange()
+        )
+
+        embed.add_field(
+            name="Social Engineer",
+            value="Wins : " + stats.get("SEWin") + "\nLoses : " + stats.get("SELoses")
+                  + " \nRatio : " + stats.get("SERatio"),
+            inline=True
+
+        )
+        return embed
+
+    elif page == 8:
+        embed = discord.Embed(
+            title=targetUser + '\'s Blackhat games',
+            timestamp=datetime.datetime.utcnow(),
+            colour=discord.colour.Colour.orange()
+        )
+
+        embed.add_field(
+            name="Blackhat",
+            value="Wins : " + stats.get("BHWin") + "\nLoses : " + stats.get("BHLoses")
+                  + " \nRatio : " + stats.get("BHRatio"),
+            inline=True
+
+        )
+        return embed
+
+    elif page == 9:
+        embed = discord.Embed(
+            title=targetUser + '\'s Improvised Hacker games',
+            timestamp=datetime.datetime.utcnow(),
+            colour=discord.colour.Colour.orange()
+        )
+
+        embed.add_field(
+            name="IH",
+            value="Wins : " + stats.get("IHWin") + "\nLoses : " + stats.get("IHLoses")
+                  + " \nRatio : " + stats.get("IHRatio"),
+            inline=True
+
+        )
+        return embed
+
+    elif page == 10:
+        embed = discord.Embed(
+            title=targetUser + '\'s Spearphisher games',
+            timestamp=datetime.datetime.utcnow(),
+            colour=discord.colour.Colour.orange()
+        )
+
+        embed.add_field(
+            name="Spearphisher",
+            value="Wins : " + stats.get("SpearWin") + "\nLoses : " + stats.get("SpearLoses")
+                  + " \nRatio : " + stats.get("SpearRatio"),
+            inline=True
+
+        )
+        return embed
+
+    elif page == 11:
+        embed = discord.Embed(
+            title=targetUser + '\'s Bounty Hunter',
+            timestamp=datetime.datetime.utcnow(),
+            colour=discord.colour.Colour.orange()
+        )
+
+        embed.add_field(
+            name="Bounty Hunter",
+            value="Wins : " + stats.get("BoHuWin") + "\nLoses : " + stats.get("BoHuLoses")
+                  + " \nRatio : " + stats.get("BoHuRatio"),
+            inline=True
+
+        )
+        return embed

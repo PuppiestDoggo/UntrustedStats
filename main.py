@@ -95,4 +95,4 @@ if __name__ == "__main__":
     pass
 
 
-bot.run("ODczNTM5NTQ0NjUyMzMzMDg2.YQ55GQ.R5O1LFtuTFGK0XWM93tWZR6bgpc")
+bot.run("ODczNTM5NTQ0NjUyMzMzMDg2.YQ55GQ.V0-MnjALOfoAz0WiA2G-EdDIJkI")
