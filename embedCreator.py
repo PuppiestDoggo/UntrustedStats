@@ -71,7 +71,7 @@ def createEmbed(stats, targetUser, page):
         )
 
         embed.add_field(
-            name="Badges",
+            name="Badges ("+stats.get("totalOfBadges")+")",
             value=str(stats.get("badges")).replace("'", "").replace("[", "").replace("]", ""),
             inline=False
 
