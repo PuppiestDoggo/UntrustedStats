@@ -14,15 +14,13 @@ def userStats(targetUser):
     level = str(divLevel[0]).replace('<div class="level-text"><span class="part">Level', "").split("<")[0]
     stringLevel = str(divLevel[0]).split("(")[1].split(")")[0]
 
-    winstreakTitle = soup.find_all("h1", {"class": "win-streak"})
-
-    winstreak = str(winstreakTitle).split("wins")[0].replace('[<h1 class="win-streak"><span class="part">Current Winning Streak:</span> <span class="part">', "")
-    winstreakXP =  str(winstreakTitle).split("wins")[1].split('(')[1].split(')')[0]
-    if not winstreakXP:
+    try:
+        winstreakTitle = soup.find_all("h1", {"class": "win-streak"})
+        winstreak = str(winstreakTitle).split("wins")[0].replace('[<h1 class="win-streak"><span class="part">Current Winning Streak:</span> <span class="part">', "")
+        winstreakXP =  str(winstreakTitle).split("wins")[1].split('(')[1].split(')')[0]
+    except:
         winstreakXP = 1.0
-    if not winstreak:
         winstreak = 0
-
 
     games = soup.find_all("table", {"class": "grid-table win-table"})
     season = str(games[0]).split("SEASON")[1].split("TOTAL")[0]
