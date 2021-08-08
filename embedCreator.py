@@ -31,13 +31,13 @@ def createEmbed(stats, targetUser, page):
 
         embed.add_field(
             name="Win Streak",
-            value="Current win Streak : "+stats.get("WinStreak"),
+            value="Current win Streak : "+str'stats.get("WinStreak")),
             inline=True
         )
 
         embed.add_field(
             name="Win Streak Boost",
-            value="Current win Streak Boost: "+stats.get("winStreakBoost"),
+            value="Current win Streak Boost: "+str(stats.get("winStreakBoost")),
             inline=True
         )
 
