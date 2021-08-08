@@ -217,3 +217,223 @@ def createEmbed(stats, targetUser, page):
 
         )
         return embed
+
+    elif page == 12:
+        embed = discord.Embed(
+            title=targetUser + '\'s Journalist',
+            timestamp=datetime.datetime.utcnow(),
+            colour=discord.colour.Colour.orange()
+        )
+
+        embed.add_field(
+            name="Journalist",
+            value="Wins : " + stats.get("JournoWin") + "\nLoses : " + stats.get("JournoLoses")
+                  + " \nRatio : " + stats.get("JournoRatio"),
+            inline=True
+
+        )
+        return embed
+        # add 1 to elif page ==  ; Modify name, stats.get("OLWin" etc
+        # looks nicer
+    elif page == 13:
+        embed = discord.Embed(
+            title=targetUser + '\'s Script Kiddie',
+            timestamp=datetime.datetime.utcnow(),
+            colour=discord.colour.Colour.orange()
+        )
+
+        embed.add_field(
+            name="Script Kiddie",
+            value="Wins : " + stats.get("SkiddieWin") + "\nLoses : " + stats.get("SkiddieLoses")
+                  + " \nRatio : " + stats.get("SkiddieRatio"),
+            inline=True
+
+        )
+        return embed
+        # add 1 to elif page ==  ; Modify name, stats.get("OLWin" etc
+        # looks nicer
+    elif page == 14:
+        embed = discord.Embed(
+            title=targetUser + '\'s Panicked Blabbermouth',
+            timestamp=datetime.datetime.utcnow(),
+            colour=discord.colour.Colour.orange()
+        )
+
+        embed.add_field(
+            name="Panicked Blabbermouth",
+            value="Wins : " + stats.get("BlubberWin") + "\nLoses : " + stats.get("BlubberLoses")
+                  + " \nRatio : " + stats.get("BlubberRatio"),
+            inline=True
+
+        )
+        return embed
+        # add 1 to elif page ==  ; Modify name, stats.get("OLWin" etc
+        # looks nicer
+    elif page == 15:
+        embed = discord.Embed(
+            title=targetUser + '\'s Resentful Criminal',
+            timestamp=datetime.datetime.utcnow(),
+            colour=discord.colour.Colour.orange()
+        )
+
+        embed.add_field(
+            name="Resentful Criminal",
+            value="Wins : " + stats.get("RCWin") + "\nLoses : " + stats.get("RCLoses")
+                  + " \nRatio : " + stats.get("RCRatio"),
+            inline=True
+
+        )
+        return embed
+        # add 1 to elif page ==  ; Modify name, stats.get("OLWin" etc
+        # looks nicer
+    elif page == 16:
+        embed = discord.Embed(
+            title=targetUser + '\'s Sociopath',
+            timestamp=datetime.datetime.utcnow(),
+            colour=discord.colour.Colour.orange()
+        )
+
+        embed.add_field(
+            name="Sociopath",
+            value="Wins : " + stats.get("SocioWin") + "\nLoses : " + stats.get("SocioLoses")
+                  + " \nRatio : " + stats.get("SocioRatio"),
+            inline=True
+
+        )
+        return embed
+        # add 1 to elif page ==  ; Modify name, stats.get("OLWin" etc
+        # looks nicer
+    elif page == 17:
+        embed = discord.Embed(
+            title=targetUser + '\'s Rival Hacker',
+            timestamp=datetime.datetime.utcnow(),
+            colour=discord.colour.Colour.orange()
+        )
+
+        embed.add_field(
+            name="Rival Hacker",
+            value="Wins : " + stats.get("RHWin") + "\nLoses : " + stats.get("RHLoses")
+                  + " \nRatio : " + stats.get("RHRatio"),
+            inline=True
+
+        )
+        return embed
+        # add 1 to elif page ==  ; Modify name, stats.get("OLWin" etc
+        # looks nicer
+    elif page == 18:
+        embed = discord.Embed(
+            title=targetUser + '\'s Corrupt Detective',
+            timestamp=datetime.datetime.utcnow(),
+            colour=discord.colour.Colour.orange()
+        )
+
+        embed.add_field(
+            name="Corrupt Detective",
+            value="Wins : " + stats.get("CDWin") + "\nLoses : " + stats.get("CDLoses")
+                  + " \nRatio : " + stats.get("CDRatio"),
+            inline=True
+
+        )
+        return embed
+        # add 1 to elif page ==  ; Modify name, stats.get("OLWin" etc
+        # looks nicer
+    elif page == 19:
+        embed = discord.Embed(
+            title=targetUser + '\'s Agent Leader',
+            timestamp=datetime.datetime.utcnow(),
+            colour=discord.colour.Colour.orange()
+        )
+
+        embed.add_field(
+            name="Agent Leader",
+            value="Wins : " + stats.get("ALWin") + "\nLoses : " + stats.get("ALLoses")
+                  + " \nRatio : " + stats.get("ALRatio"),
+            inline=True
+
+        )
+        return embed
+        # add 1 to elif page ==  ; Modify name, stats.get("OLWin" etc
+        # looks nicer
+    elif page == 20:
+        embed = discord.Embed(
+            title=targetUser + '\'s Field Agent',
+            timestamp=datetime.datetime.utcnow(),
+            colour=discord.colour.Colour.orange()
+        )
+
+        embed.add_field(
+            name="Field Agent",
+            value="Wins : " + stats.get("FAWin") + "\nLoses : " + stats.get("FALoses")
+                  + " \nRatio : " + stats.get("FARatio"),
+            inline=True
+
+        )
+        return embed
+        # add 1 to elif page ==  ; Modify name, stats.get("OLWin" etc
+        # looks nicer
+    elif page == 21:
+        embed = discord.Embed(
+            title=targetUser + '\'s Converted NETSEC/Field-OP',
+            timestamp=datetime.datetime.utcnow(),
+            colour=discord.colour.Colour.orange()
+        )
+
+        embed.add_field(
+            name="Converted NETSEC/Field-OP",
+            value="Wins : " + stats.get("Mole FOWin") + "\nLoses : " + stats.get("Mole FOLoses")
+                  + " \nRatio : " + stats.get("Mole FORatio"),
+            inline=True
+
+        )
+        return embed
+        # add 1 to elif page ==  ; Modify name, stats.get("OLWin" etc
+        # looks nicer
+    elif page == 22:
+        embed = discord.Embed(
+            title=targetUser + '\'s Converted NETSEC/Investigative',
+            timestamp=datetime.datetime.utcnow(),
+            colour=discord.colour.Colour.orange()
+        )
+
+        embed.add_field(
+            name="Converted NETSEC/Investigative",
+            value="Wins : " + stats.get("Mole invWin") + "\nLoses : " + stats.get("Mole invLoses")
+                  + " \nRatio : " + stats.get("Mole invRatio"),
+            inline=True
+
+        )
+        return embed
+        # add 1 to elif page ==  ; Modify name, stats.get("OLWin" etc
+        # looks nicer
+    elif page == 23:
+        embed = discord.Embed(
+            title=targetUser + '\'s Converted NETSEC/offensive',
+            timestamp=datetime.datetime.utcnow(),
+            colour=discord.colour.Colour.orange()
+        )
+
+        embed.add_field(
+            name="Converted NETSEC/offensive",
+            value="Wins : " + stats.get("Mole offWin") + "\nLoses : " + stats.get("Mole offLoses")
+                  + " \nRatio : " + stats.get("Mole offRatio"),
+            inline=True
+
+        )
+        return embed
+        # add 1 to elif page ==  ; Modify name, stats.get("OLWin" etc
+        # looks nicer
+    elif page == 24:
+        embed = discord.Embed(
+            title=targetUser + '\'s Runaway Snitch',
+            timestamp=datetime.datetime.utcnow(),
+            colour=discord.colour.Colour.orange()
+        )
+
+        embed.add_field(
+            name="Runaway Snitch",
+            value="Wins : " + stats.get("RSWin") + "\nLoses : " + stats.get("RSLoses")
+                  + " \nRatio : " + stats.get("RSRatio"),
+            inline=True
+
+        )
+        return embed

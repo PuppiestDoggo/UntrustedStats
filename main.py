@@ -55,7 +55,7 @@ async def stats(ctx, targetUser):
                 if current > 0:
                     current -= 1
             elif reaction.emoji == u"\u25B6":
-                if current < 10 - 1:
+                if current < 25 - 1:
                     current += 1
 
             elif reaction.emoji == u"\u23E9":
@@ -95,4 +95,4 @@ if __name__ == "__main__":
     pass
 
 
-bot.run("ODczNTM5NTQ0NjUyMzMzMDg2.YQ55GQ.V0-MnjALOfoAz0WiA2G-EdDIJkI")
+bot.run("TOKEN")
