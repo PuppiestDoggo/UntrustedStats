@@ -12,8 +12,39 @@ def createEmbed(stats, targetUser, page):
         )
 
         embed.add_field(
+            name="​",
+            value="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+            inline=False
+        )
+
+        embed.add_field(
             name="Level",
             value=stats.get("level") + " " + stats.get("strLevel"),
+            inline=False
+        )
+
+        embed.add_field(
+            name="​",
+            value="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+            inline=False
+        )
+
+        embed.add_field(
+            name="Win Streak",
+            value="Current win Streak : "+stats.get("WinStreak"),
+            inline=True
+        )
+
+        embed.add_field(
+            name="Win Streak Boost",
+            value="Current win Streak Boost: "+stats.get("winStreakBoost"),
+            inline=True
+        )
+
+
+        embed.add_field(
+            name="​",
+            value="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
             inline=False
         )
 
@@ -32,10 +63,17 @@ def createEmbed(stats, targetUser, page):
 
         )
 
+
+        embed.add_field(
+            name="​",
+            value="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+            inline=False
+        )
+
         embed.add_field(
             name="Badges",
             value=str(stats.get("badges")).replace("'", "").replace("[", "").replace("]", ""),
-            inline=True
+            inline=False
 
         )
 
