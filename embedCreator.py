@@ -31,7 +31,7 @@ def createEmbed(stats, targetUser, page):
 
         embed.add_field(
             name="Win Streak",
-            value="Current win Streak : "+str'stats.get("WinStreak")),
+            value="Current win Streak : "+str(stats.get("WinStreak")),
             inline=True
         )
 
