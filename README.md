@@ -1,2 +1,0 @@
-# UntrustedStats
-I'm lazy.
